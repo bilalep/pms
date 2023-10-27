@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+    <tr>
+        <th scope="row">Sl</th>
+        <td>Topic</td>
+        <td>Modules</td>
+        <td>Edit</td>
+        <td>Delete</td>
+
+    </tr>
+    {% for project in data %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ project.topic }}</td>
+            <td>{{ project.modules }}</td>
+            <td><a href="/admin_update_project/{{ project.id }}">Edit</a></td>
+            <td><a href="/admin_delete_project/{{ project.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

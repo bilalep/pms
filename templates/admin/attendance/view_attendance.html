@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>View Attendance</title>
+</head>
+
+<body><table width="300" border="1">
+  <tr>
+    <th scope="row">Sl</th>
+    <td>Register Number</td>
+    <td>Student Name</td>
+    <td>Group Name</td>
+    <td>Attendance</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td>{{ i.STUDENT.reg_no }}</td>
+    <td>{{ i.STUDENT.name }}</td>
+    <td>{{ i.GROUP.groupname }}</td>
+    <td>{{ i.attendance }}</td>
+  </tr>
+    {% endfor %}
+  
+</table>
+
+</body>
+</html>

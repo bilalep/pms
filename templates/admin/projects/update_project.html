@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Project</title>
+</head>
+<body>
+
+<form id="form1" name="form1" method="post" action="/admin_update_project_post/{{ data.id }}">
+  {% csrf_token %}
+    <table width="200" border="1">
+    <tr>
+      <th scope="row">Topic</th>
+      <td>
+      <input type="text" name="textfield" id="textfield" value="{{ data.topic }}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Modules</th>
+      <td>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data.modules}}" /></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Update" /></th>
+    </tr>
+  </table>
+</form>
+
+
+</body>
+</html>

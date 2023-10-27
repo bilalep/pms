@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="1">
+    <tr>
+        <th scope="row">sl</th>
+        <td>GroupName</td>
+        <td>Internal Guide name</td>
+        <td>External Guide name</td>
+        <td>edit</td>
+        <td>delete</td>
+    </tr>
+    {% for i in data %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ i.groupname }}</td>
+            <td>{{ i.INTERNALGUIDE.name }}</td>
+            <td>{{ i.EXTERNALGUIDE.name }}</td>
+            <td><a href="/admin_update_group/{{ i.id }}">Edit</a> </td>
+            <td><a href="/admin_delete_group/{{ i.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<form action="" method="get"></form>
+</body>
+</html>
